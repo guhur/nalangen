@@ -21,7 +21,7 @@
 %moveCube
     %put %object1 %localization %object2
     %object1 goes %localization %object2
-    you? %must? %please? %put %object1 %localization %object2
+    you? %must? please? %put %object1 %localization %object2
     you? %must? %grasp %object before you %release it %localization %object2
 
 

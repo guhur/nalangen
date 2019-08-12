@@ -10,7 +10,10 @@
 
 %buildTower2
     %put %object1 %top %object2
-    %object1 goes %top %object2
+    %object1 %must? goes %top %object2
+    you %must %put %object1 %top %object2
+    you %must %put %object2 %below %object1
+
 
 %buildTower3
     %object1 goes %bottom %object2 and? %after %put %object3 %top %object2 
@@ -18,6 +21,8 @@
 %moveCube
     %put %object1 %localization %object2
     %object1 goes %localization %object2
+    you? %must? %please? %put %object1 %localization %object2
+    you? %must? %grasp %object before you %release it %localization %object2
 
 
 %releaseCube

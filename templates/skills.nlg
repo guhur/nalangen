@@ -19,21 +19,21 @@
     %object1 goes %bottom %object2 and? %after %put %object3 %top %object2 
 
 %moveCube
-    %put %object1 %localization %object2
-    you? %must? please? %put %object1 %localization %object2
-    you? %must? %grasp %object before you %release it %localization %object2
+    %put %object1 %location %object2
+    you? %must? please? %put %object1 %location %object2
+    you? %must? %grasp %object before you %release it %location %object2
 
 %releaseCube
-    %release it %localization %object
+    %release it %location %object
 
 %graspCube
     %grasp %object
 
 %moveTest
-    %object1 goes %localization %object2
+    %object1 goes %location %object2
 
 %releaseTest
-    you %must %release %localization %object 
+    you %must %release %location %object 
 
 %graspTest
     you %must %grasp %object

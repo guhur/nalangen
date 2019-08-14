@@ -32,7 +32,7 @@ def test_with_synomyms_in_context(parser):
               "%object1.%type": "cup",
               "%object2.%color": "white",
               "%object2.%type": "cube",
-              "%localization": "%left"}
+              "%location": "%left"}
     context.add(parse_dict(params, obj_key=context.key))
 
     flats, trees = generate_sentences(parser, context, 5)

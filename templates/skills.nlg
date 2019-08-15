@@ -30,10 +30,10 @@
     %grasp %object
 
 %moveTest
-    %object1 goes %location %object2
+    you have to take %object1 to put it %location %object2
 
 %releaseTest
-    you %must %release %location %object 
+    you have to %release it %location %object 
 
 %graspTest
-    you %must %grasp %object
+    you have to %grasp %object

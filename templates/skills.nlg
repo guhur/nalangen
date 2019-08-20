@@ -20,7 +20,7 @@
 
 %moveCube
     please? %put %object1 %location %object2
-    %grasp %object before you %release it %location %object2
+    %grasp %object1 before you %release it %location %object2
 
 %releaseCube
     %release it %location %object

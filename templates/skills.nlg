@@ -19,9 +19,8 @@
     %object1 goes %bottom %object2 and? %after %put %object3 %top %object2 
 
 %moveCube
-    %put %object1 %location %object2
-    you? %must? please? %put %object1 %location %object2
-    you? %must? %grasp %object before you %release it %location %object2
+    please? %put %object1 %location %object2
+    %grasp %object before you %release it %location %object2
 
 %releaseCube
     %release it %location %object
@@ -30,7 +29,7 @@
     %grasp %object
 
 %moveTest
-    you have to take %object1 to put it %location %object2
+    you have to %put %object1  %location %object2
 
 %releaseTest
     you have to %release it %location %object 

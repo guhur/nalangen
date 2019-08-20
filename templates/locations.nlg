@@ -2,13 +2,13 @@
     %top
     %below
     %side
+    %over
     %left 
     %right 
 
 
 %top
     on top of
-    above
     atop of
 
 %over 

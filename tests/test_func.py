@@ -5,7 +5,7 @@ import logging
 
 def test_from_dict(parser):
     """ Generate a sentence with parameters given as a dictionary """
-    context = Node("%buildTower3")
+    context = Node("%stepByStepTower3")
     params = {"%object1.%color": "blue",
               "%object1.%type": "cup",
               "%object2.%color": "white",
@@ -50,5 +50,6 @@ if __name__ == "__main__":
 
     parser = default_parser()
     test_with_synomyms_in_context(parser)
+    test_from_dict(parser)
 
 

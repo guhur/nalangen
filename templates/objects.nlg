@@ -24,7 +24,24 @@
 %object
     the %color %type
 
-    
+%referredObject
+    the %color one
+    %object
+
+%lastObject
+    the last one
+    the final one
+    the last object
+    the final object
+    %object
+
+%otherObjects
+    the other objects
+    the other ones
+    the rest
+    %object
+
+
 %size
     big
     small

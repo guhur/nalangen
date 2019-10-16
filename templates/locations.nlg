@@ -6,6 +6,11 @@
     %left 
     %right 
 
+%located
+    located?
+    positioned?
+    sited?
+
 
 %top
     on top of

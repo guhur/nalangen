@@ -15,8 +15,19 @@
     you %must %put %object2 %below %object1
 
 
-%buildTower3
-    %object1 goes %bottom %object2 and? %after %put %object3 %top %object2 
+%stepByStepTower3
+    %object1 goes %top %object2 and? %after %put %object3 %top %object2
+    
+%stepByStepTower3WithReferences
+    %object1 goes %top %referredObject2 and? %after %put %lastObject3 %top %otherObjects2
+
+%descriptiveTower3
+    %object1 is %located %top %referredObject2 and %lastObject3 is %located %top %otherObjects2
+    %object2 is %located %below %referredObject1 and %lastObject3 is %located %top %otherObjects2
+    %object3 is %located %below %referredObject2 and %lastObject1 is %located %below %otherObjects2
+    %object1 is %located %top %referredObject2 and %lastObject3 is %located %below %otherObjects2
+    %object3 is %located %below %otherObjects2 and %lastObject1 is %located %top %referredObject2
+    From bottom to top, the tower is %built %object1, %referredObject2, and %lastObject3
 
 %moveCube
     please? %put %object1 %location %object2

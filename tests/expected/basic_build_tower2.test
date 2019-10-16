@@ -1,14 +1,14 @@
 
->Put the blue cup atop of the blue cube.
+>The purple cube got to goes atop of the yellow mug.
 ( %buildTower2
-    ( %put (0, 0, 1) )
-    ( %object1 (1, 3, 3)
-        ( %color (2, 2, 1) )
-        ( %type (3, 3, 1)
-            ( %cup (3, 3, 1) ) ) )
-    ( %top (4, 5, 2) )
-    ( %object2 (6, 8, 3)
-        ( %color (7, 7, 1) )
-        ( %type (8, 8, 1)
-            ( %cube (8, 8, 1) ) ) ) )
+    ( %object1 (0, 2, 3)
+        ( %color (1, 1, 1) )
+        ( %type (2, 2, 1)
+            ( %cube (2, 2, 1) ) ) )
+    ( %must (3, 4, 2) )
+    ( %top (6, 7, 2) )
+    ( %object2 (8, 10, 3)
+        ( %color (9, 9, 1) )
+        ( %type (10, 10, 1)
+            ( %cup (10, 10, 1) ) ) ) )
 --------------------------------------------------------------------------------

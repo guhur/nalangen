@@ -30,7 +30,7 @@
     From bottom to top, the tower is %built %object1, %referredObject2, and %lastObject3
 
 %moveCube
-    please? %put %object1 %location %object2
+    %noisy? %put %object1 %location %object2
     %grasp %object1 before you %release it %location %object2
 
 %releaseCube

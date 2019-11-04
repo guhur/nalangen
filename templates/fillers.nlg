@@ -3,6 +3,7 @@
     after
     next
     thereafter
+    afterwards
 
 %must 
     must 
@@ -11,3 +12,10 @@
     got to 
 
 
+%noisy
+    %after
+    now
+    first
+    finally
+    second
+    very

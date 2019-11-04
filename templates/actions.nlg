@@ -2,6 +2,8 @@
     put 
     move
     bring
+    place
+    add
   
 
 %release

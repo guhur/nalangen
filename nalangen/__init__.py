@@ -1,8 +1,11 @@
 from pathlib import Path
-from nalangen.parse import *
+import re
+from nalangen.parse import parse_file, tokenize_leaf, parse_dict
 from nalangen.node import Node
 import os
+import sys
 import json
+import random
 from argparse import ArgumentParser
 import logging
 

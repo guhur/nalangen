@@ -1,10 +1,7 @@
 import re
 import os
 import math
-import random
-import json
-import sys
-from nalangen.node import *
+from nalangen.node import Node
 
 SHIFT_WIDTH = 4
 
@@ -43,7 +40,6 @@ def parse_string(string, template_dir=""):
             level += 1
             indexes.append(0)
         elif ind < last_ind: # Up to next item in parent list
-            diff = (last_ind - ind)
             for i in range(last_ind - ind):
                 level -= 1
                 indexes.pop()
@@ -57,7 +53,7 @@ def parse_string(string, template_dir=""):
 def tokenize_leaf(n):
     n.type = 'seq'
     for s in n.key.split(' '):
-        added = n.add(s)
+        _ = n.add(s)
     n.key = 'seq'
 
 def parse_file(filename):

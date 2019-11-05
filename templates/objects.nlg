@@ -27,6 +27,25 @@
 %type
     %cube
     %cup
+    one
+
+%leftmost
+    leftmost
+    left most
+    at the left
+    far left
+
+%rightmost
+    rightmost
+    at the right
+    right most
+    far right
+
+%middle
+    at the middle
+    middle
+    in the midst of
+    midst
 
 %object
     the %color %type
@@ -40,14 +59,14 @@
     the final one
     the last object
     the final object
-    %object
 
 %otherObjects
     the other objects
     the other ones
+    the stack of cubes
+    the stacked blocks
+    the tower
     the rest
-    %object
-
 
 %size
     big

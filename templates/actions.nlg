@@ -3,20 +3,19 @@
     move
     bring
     place
+    stack
     add
-  
 
 %release
     leave
     release
-    deliver
+    place
 
 %grasp
     grasp
+    pick up
     take
-    catch
-    yield
-    hold
+    grab
 
 %built
     made from

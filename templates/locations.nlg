@@ -5,6 +5,8 @@
     %over
     %left 
     %right 
+    %front
+    %rear
 
 %located
     located?
@@ -41,3 +43,18 @@
 
 %right
     at the right side? of
+
+%front
+    front
+    in the foreground
+    head
+    face
+    in the forehead
+    in the forepart
+
+%back
+    back
+    rear
+    tail
+    in the background
+

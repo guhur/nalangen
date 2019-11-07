@@ -31,19 +31,11 @@
 
 %moveCube
     %noisy? %put %object1 %location %object2
-    %grasp %object1 before you %release it %location %object2
+    %grasp %object1 before you? %release it %location %object2
+    you %must %put %object1 %location %object2
 
 %releaseCube
     %release it %location %object
 
 %graspCube
     %grasp %object
-
-%moveTest
-    you have to %put %object1  %location %object2
-
-%releaseTest
-    you have to %release it %location %object 
-
-%graspTest
-    you have to %grasp %object

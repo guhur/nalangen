@@ -4,17 +4,22 @@
     bring
     place
     stack
+    take
     add
 
 %release
     leave
     release
+    keep
     place
 
 %grasp
     grasp
     pick up
     take
+    grip
+    catch
+    hold
     grab
 
 %built

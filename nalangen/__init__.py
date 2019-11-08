@@ -142,9 +142,9 @@ def parser_from_file(filename):
     parsed.map_leaves(tokenize_leaf)
     return parsed
 
-def default_parser():
+def default_parser(folder="templates"):
     root_dir = Path(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
-    return parser_from_file(root_dir / "templates" / "skills.nlg")
+    return parser_from_file(root_dir / folder / "skills.nlg")
 
 def generate_sentences(parsed, context=Node('%'), n=1):
     """ Generate random sentences from a parser """ 

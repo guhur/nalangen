@@ -72,3 +72,18 @@
     big
     small
 
+%sizing
+    smallest
+    biggest
+    largest
+    littlest
+
+%rellocation
+    %middle
+    %leftmost
+    %rightmost
+
+%ref
+    %color
+    %sizing
+    %rellocation

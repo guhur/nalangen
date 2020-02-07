@@ -48,7 +48,7 @@
     midst
 
 %object
-    the %color %type
+    the %ref %type
 
 %referredObject
     the %color one

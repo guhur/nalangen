@@ -1,0 +1,16 @@
+@import objects.nlg
+@import locations.nlg
+@import actions.nlg
+@import fillers.nlg
+
+%moveCube
+    %noisy? %put %object1 %over %object2
+    %noisy? %put %object2 %below %object1
+    %grasp %object1 before you? %release it %location %object2
+    you %must %put %object1 %location %object2
+
+%releaseCube
+    %release it %location %object
+
+%graspCube
+    %grasp %object

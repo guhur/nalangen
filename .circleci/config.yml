@@ -12,5 +12,8 @@ jobs:
           name: install-deps
           command: pip install -r requirements.txt
       - run:
+          name: install-nalangen
+          command:  pushd project && pip install -e . && popd
+      - run:
           name: test
-          command: pytest
+          command: pushd project && pytest && popd

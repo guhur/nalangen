@@ -1,0 +1,30 @@
+%put
+    set
+    put 
+    move
+    bring
+    place
+    stack
+    take
+    add
+
+%release
+    leave
+    release
+    keep
+    place
+
+%grasp
+    grasp
+    pick up
+    take
+    grip
+    catch
+    hold
+    grab
+
+%built
+    made from
+    built with
+    composed of
+    assembled with

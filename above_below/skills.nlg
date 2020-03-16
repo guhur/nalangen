@@ -4,13 +4,15 @@
 @import fillers.nlg
 
 %moveCube
-    %noisy? %put %object1 %over %object2
-    %noisy? %put %object2 %below %object1
-    %grasp %object1 before you? %release it %location %object2
-    you %must %put %object1 %location %object2
+    %noisy? %noisy? %noisy? %put %noisy? %noisy? %noisy? %object1 %noisy? %noisy? %noisy? %over %noisy? %noisy? %noisy? %object2 %noisy? %noisy? %noisy? 
+    %noisy? %noisy? %noisy? %put %noisy? %noisy? %noisy? %object2 %noisy? %noisy? %noisy? %below %noisy? %noisy? %noisy? %object1 %noisy? %noisy? %noisy? 
+    %grasp %object1 before you? %release it %location %object2 %noisy? %noisy? %noisy? 
+    %noisy? %noisy? %noisy? you %must %put %noisy? %noisy? %noisy? %object1 %noisy? %noisy? %noisy? %location %noisy? %noisy? %noisy? %object2 %noisy? %noisy? %noisy? 
+
 
 %releaseCube
-    %release it %location %object
+    %release %noisy? %noisy? %noisy? it %noisy? %noisy? %noisy? %location %noisy? %noisy? %noisy? %object %noisy? %noisy? %noisy? 
 
 %graspCube
-    %grasp %object
+    %grasp %noisy? %noisy? %noisy? %object %noisy? %noisy? %noisy? 
+

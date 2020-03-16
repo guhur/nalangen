@@ -1,5 +1,8 @@
 %cube
      shape
+     block
+     bloc
+     box
      cube
 
 %color

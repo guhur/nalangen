@@ -5,7 +5,6 @@
 
 %moveCube
     %noisy? %noisy? %noisy? %put %noisy? %noisy? %noisy? %object1 %noisy? %noisy? %noisy? %over %noisy? %noisy? %noisy? %object2 %noisy? %noisy? %noisy? 
-    %noisy? %noisy? %noisy? %put %noisy? %noisy? %noisy? %object2 %noisy? %noisy? %noisy? %below %noisy? %noisy? %noisy? %object1 %noisy? %noisy? %noisy? 
     %grasp %object1 before you? %release it %location %object2 %noisy? %noisy? %noisy? 
     %noisy? %noisy? %noisy? you %must %put %noisy? %noisy? %noisy? %object1 %noisy? %noisy? %noisy? %location %noisy? %noisy? %noisy? %object2 %noisy? %noisy? %noisy? 
 

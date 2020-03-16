@@ -1,10 +1,17 @@
 %put
+    make
+    placing
+    placed
+    build
+    pile
     set
     put 
     move
     bring
     place
     stack
+    lift
+    stacking
     take
     add
 

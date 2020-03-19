@@ -1,0 +1,65 @@
+%location
+    %top
+    %below
+    %side
+    %over
+    %left 
+    %right 
+    %front
+    %back
+
+%located
+    located?
+    positioned?
+    sited?
+
+%top
+    on top of
+    atop of
+
+%over 
+    on top of
+    atop of
+    over
+    unto
+    onto
+    above
+    on the stack of
+    upon
+    on high of 
+
+%below
+    below
+    underneath
+
+%bottom
+    %below
+
+%side
+    next to
+    beside
+    alongside
+    by
+    next 
+    off  
+
+%left
+    at the left side? of
+
+%right
+    at the right side? of
+
+%front
+    front
+    in the foreground
+    head
+    face
+    in the forehead
+    in the forepart
+
+%back
+    back
+    rear
+    tail
+    in the background
+

@@ -51,7 +51,7 @@ def walk_tree(root, current, context, start_w=0):
     try:
         seq = random.choice(current)
     except Exception as e:
-        logging.error('Exception walking from current', current, context)
+        logging.error(f'Exception walking from current {current} with context {context}')
         raise e
 
     flat = Node('>')

@@ -1,5 +1,8 @@
 %cube
      shape
+     block
+     bloc
+     box
      cube
 
 %color
@@ -76,7 +79,7 @@
     smallest
     biggest
     largest
-    most little
+    littlest
 
 %rellocation
     %middle

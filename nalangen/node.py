@@ -1,3 +1,5 @@
+from typing import List, Dict, Optional
+
 node_types = {
     '%': 'phrase',
     '@': 'ref',
@@ -7,12 +9,14 @@ node_types = {
 
 class Node:
     def __init__(self, key):
-        self.type = 'word'
-        self.passthrough = False
-        self.optional = False
-        self.position = None
+        self.type: str = 'word'
+        self.passthrough: bool = False
+        self.optional: bool = False
+        self.position: bool = None
 
         # Parse type and options
+        if not isinstance(key, str):
+            import pdb; pdb.set_trace()
         if len(key) > 0:
             if key.endswith('='):
                 self.passthrough = True
@@ -22,11 +26,11 @@ class Node:
                 self.type = node_types[type_key]
         else:
             self.type = 'root?'
-        self.key = key
+        self.key: str = key
 
-        self.parent = None
-        self.children = []
-        self.children_by_key = {}
+        self.parent: Optional[Node] = None
+        self.children: List[Node] = []
+        self.children_by_key: Dict[str, Node] = {}
 
     @property
     def printable_key(self):
@@ -38,7 +42,7 @@ class Node:
     def __str__(self):
         return self.str(0)
 
-    def __getitem__(self, key):
+    def __getitem__(self, key) -> "Node":
         # print('[__getitem__]', self, key)
         if isinstance(key, list):
             return self.descend(key)
@@ -46,7 +50,8 @@ class Node:
             if key in self.children_by_key:
                 return self.children_by_key[key]
             else:
-                return None
+                # return None
+                return Node(key)
  
         else:
             return self.children[key]

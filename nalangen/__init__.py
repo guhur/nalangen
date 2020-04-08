@@ -1,3 +1,4 @@
+from typing import Optional
 from pathlib import Path
 import re
 from nalangen.parse import parse_file, tokenize_leaf, parse_dict
@@ -12,23 +13,31 @@ import logging
 all_punctuation = ';:,.!?'
 end_punctuation = '.!?'
 
-def find_next_node(child_key, current_key, root, context):
-    next_node = None
+def find_next_node(
+        child_key: str, current_key: str, root: Node, context: Node
+    ) -> Optional[Node]:
+
+    next_node: Optional[Node] = None
+
     if context is not None and child_key in context:
-        next_node = context[child_key]    
-        if next_node is not None and next_node.key.startswith(('%', '~')) and \
-            next_node.key in root:
+        next_node = context[child_key]
+        if (
+            next_node is not None and
+            next_node.key.startswith(('%', '~')) and
+            next_node.key in root
+            ):
             key = next_node.children[0].key
-            next_node = root[key] 
+            next_node = root[key]
         return next_node
+
     composed = f"{current_key}.{child_key}"
     if context is not None and composed in context:
         next_node = context[composed]
         if next_node is not None and next_node.key.startswith(('%', '~')) and \
             next_node.key in root:
             key = next_node.children[0].key
-            next_node = root[key] 
-        return next_node   
+            next_node = root[key]
+        return next_node
     # there is no context so we are looking for a key in the tree
     if child_key in root:
         next_node = root[child_key]
@@ -44,14 +53,14 @@ def find_next_node(child_key, current_key, root, context):
 
 def walk_tree(root, current, context, start_w=0):
     """ Generate tokens up to $value level """
-
     logging.debug('[%d walk_tree] current %s context %s '
             % (start_w, str(current.key), str(context)))
 
     try:
         seq = random.choice(current)
     except Exception as e:
-        logging.error(f'Exception walking from current {current} with context {context}')
+        logging.error(f'Exception walking from current {current}'
+                      f' with context {context}')
         raise e
 
     flat = Node('>')
@@ -76,30 +85,35 @@ def walk_tree(root, current, context, start_w=0):
         if child_key.startswith(('%', '~')):
             next_node = find_next_node(child_key, current.key, root, context)
 
-            try:
-                sub_flat, sub_tree = walk_tree(root, next_node, context, start_w)
-            except Exception as e:
-                logging.error('Exception walking from current %s %s %s'
-                        % (current, child_key, str(context)))
-                raise e
+            if next_node.is_leaf:
+                tree.add(next_node.key)
+                flat.add(next_node.key)
 
-            # Add words to flat tree
-            flat.merge(sub_flat)
-
-            # Adjust position based on number of tokens
-            len_w = len(sub_flat)
-            sub_tree.position = (start_w, start_w + len_w - 1, len_w)
-            start_w += len_w
-
-            # Add to (or merge with) tree
-            if not child_key.startswith('~'):
-                if child_key in root and root[child_key].passthrough:
-                    tree.merge(sub_tree)
-                else:
-                    tree.add(sub_tree)
             else:
-                if tree.type == 'value':
-                    tree.merge(sub_flat)
+                try:
+                    sub_flat, sub_tree = walk_tree(root, next_node, context, start_w)
+                except Exception as e:
+                    logging.error('Exception walking from current %s %s %s'
+                            % (current, child_key, str(context)))
+                    raise e
+
+                # Add words to flat tree
+                flat.merge(sub_flat)
+
+                # Adjust position based on number of tokens
+                len_w = len(sub_flat)
+                sub_tree.position = (start_w, start_w + len_w - 1, len_w)
+                start_w += len_w
+
+                # Add to (or merge with) tree
+                if not child_key.startswith('~'):
+                    if child_key in root and root[child_key].passthrough:
+                        tree.merge(sub_tree)
+                    else:
+                        tree.add(sub_tree)
+                else:
+                    if tree.type == 'value':
+                        tree.merge(sub_flat)
 
         # Terminal node, e.g. a word
         else:

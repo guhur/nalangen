@@ -68,8 +68,8 @@ def parse_file(filename):
 def parse_dict(obj, obj_key='%'):
     tree = Node(obj_key)
     if isinstance(obj, dict):
-        for key in obj.keys():
-            tree.add(parse_dict(obj[key], key))
+        for key, val in obj.items():
+            tree.add(parse_dict(str(val), key))
         return tree
     tree.add(obj)
     return tree
